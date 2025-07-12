@@ -1,0 +1,16 @@
+Pillow
+newspaper3k
+urllib3
+streamlit
+beautifulsoup4
+protobuf==3.20.0
+jinja2>=3.0
+lxml==4.9.3
+transformers
+requests
+pandas
+nltk
+transformers
+torch
+python-dateutil
+feedparser
