@@ -12,6 +12,7 @@ import nltk
 import ssl
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
+
 # Configure SSL and user agent
 ssl._create_default_https_context = ssl._create_unverified_context
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
