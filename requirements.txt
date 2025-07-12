@@ -9,6 +9,8 @@ feedparser
 pandas
 nltk
 python-dateutil
+numpy==1.24.4
+
 
 # ML and Transformers
 transformers>=4.30.0
