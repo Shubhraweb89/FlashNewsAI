@@ -2,7 +2,6 @@
 newspaper3k
 beautifulsoup4
 lxml==4.9.3
-urllib3
 requests
 feedparser
 
@@ -13,7 +12,8 @@ python-dateutil
 
 # ML and Transformers
 transformers
-torch
+# Use CPU-only PyTorch to save 2+ GB
+https://download.pytorch.org/whl/cpu/torch-2.1.2%2Bcpu-cp310-cp310-linux_x86_64.whl
 
 # Streamlit and Visualization
 streamlit
