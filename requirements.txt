@@ -1,16 +1,22 @@
-Pillow
+# Web scraping and parsing
 newspaper3k
-urllib3
-streamlit
 beautifulsoup4
-protobuf==3.20.0
-jinja2>=3.0
 lxml==4.9.3
-transformers
+urllib3
 requests
+feedparser
+
+# Data & NLP
 pandas
 nltk
+python-dateutil
+
+# ML and Transformers
 transformers
 torch
-python-dateutil
-feedparser
+
+# Streamlit and Visualization
+streamlit
+jinja2>=3.0
+protobuf==3.20.0
+Pillow
