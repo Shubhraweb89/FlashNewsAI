@@ -16,8 +16,7 @@ numpy==1.24.4
 transformers>=4.30.0
 
 # Use CPU-only PyTorch to save 2+ GB
-
-https://download.pytorch.org/whl/cpu/torch-2.0.0%2Bcpu-cp310-cp310-linux_x86_64.whl
+torch
 
 # Streamlit and Visualization
 streamlit
