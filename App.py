@@ -12,13 +12,9 @@ import nltk
 import ssl
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
-# ==================== CONFIGURATIONS ====================
-# Configure SSL and user agent
-try:
-    ssl._create_default_https_context = ssl._create_unverified_context
-except:
-    pass  # Fallback if SSL context fails
 
+# Configure SSL and user agent
+ssl._create_default_https_context = ssl._create_unverified_context
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
 
 # Configure newspaper3k
@@ -26,29 +22,25 @@ config = Config()
 config.browser_user_agent = USER_AGENT
 config.request_timeout = 10
 
-# ==================== NLTK SETUP ====================
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    try:
-        nltk.download('punkt', download_dir='/root/nltk_data')
-    except:
-        nltk.download('punkt')  # Fallback to default location
+# Download NLTK data
+nltk.download('punkt')
 
-# ==================== MODEL LOADING ====================
-@st.cache_resource(show_spinner=False)
+# Set page config
+st.set_page_config(
+    page_title='InNews🇮🇳: AI News Portal',
+    page_icon='./Meta/newspaper.ico',
+    layout='centered'
+)
+
+# ==================== Summarizer Functions ====================
+@st.cache_resource
 def load_summarizer_model():
-    try:
-        model_path = "facebook/bart-large-cnn"  # More reliable than custom model
-        tokenizer = AutoTokenizer.from_pretrained(model_path)
-        model = AutoModelForSeq2SeqLM.from_pretrained(
-            model_path,
-            forced_bos_token_id=0  # Fixes the configuration warning
-        )
-        return tokenizer, model
-    except Exception as e:
-        st.error(f"Model loading failed: {str(e)}")
-        st.stop()
+    model_path = "Shubhraweb89/bart_model"
+    tokenizer = AutoTokenizer.from_pretrained(model_path)
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
+    model.to("cpu")
+    model.eval()
+    return tokenizer, model
 
 tokenizer, model = load_summarizer_model()
 
