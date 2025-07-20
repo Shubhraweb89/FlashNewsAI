@@ -1,0 +1,33 @@
+# ───── Python Cache and Compiled Files ─────
+__pycache__/
+*.py[cod]
+*.pyo
+
+# ───── Virtual Environment ─────
+venv/
+
+# ───── System Files ─────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# Ignore only the large model weight files
+bart_samsum_model/model.safetensors
+bart_summarizer_with_rl/model.safetensors
+
+
+
+
+# ───── Environment/Secrets ─────
+.env
+*.env
+
+# ───── Build/Dist ─────
+build/
+dist/
+*.egg-info/
+
+# ───── Jupyter Checkpoints ─────
+*.ipynb_checkpoints/
+
