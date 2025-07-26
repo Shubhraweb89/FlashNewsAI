@@ -28,7 +28,7 @@
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/InNews.git
+git clone https://github.com/Shubhraweb89/FlashNewsAI.git
 cd FlashNewsAI
 
 ### 2. Create a Virtual Environment
