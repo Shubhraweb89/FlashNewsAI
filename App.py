@@ -35,7 +35,7 @@ st.set_page_config(
 # ==================== Summarizer Functions ====================
 @st.cache_resource
 def load_summarizer_model():
-    model_path = "bart_summarizer_with_rl"
+    model_path = "Shubhraweb89/bart_model"
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
     model.to("cpu")

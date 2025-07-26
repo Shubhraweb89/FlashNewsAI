@@ -25,16 +25,21 @@
 ---
 
 ## 🚀 How to Use
-```bash
-cd InNews
-
-python -m venv venv 
-venv\Scripts\activate
-
-streamlit run App.py
-
 
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/yourusername/InNews.git
-cd InNews
+cd FlashNewsAI
+
+### 2. Create a Virtual Environment
+python -m venv venv  
+
+venv\Scripts\activate
+
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+streamlit run App.py
+
+
