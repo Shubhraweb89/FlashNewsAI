@@ -34,12 +34,14 @@ cd FlashNewsAI
 ### 2. Create a Virtual Environment
 python -m venv venv  
 
-venv\Scripts\activate
+### 3. Activate the Virtual Environment
+venv\Scripts\activate  #On Windows:
+source venv/bin/activate  #On macOS/Linux:
 
-source venv/bin/activate
-
+### 4. Install Required Dependencies
 pip install -r requirements.txt
 
+### 5. Run the Streamlit Web Application
 streamlit run App.py
 
 
